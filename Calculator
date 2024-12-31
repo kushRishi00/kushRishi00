@@ -1,0 +1,52 @@
+This is the first ever project I made by myself. Probably known as a startup or a basic project. A calculator, (yeah a basic calculator). That is all I can do with the things I know about this language. But no regrets about making this.
+import math
+a = float(input("Enter the first number: "))
+b = float(input("Enter the second number: "))
+#using define function for each operator.
+
+def add(a,b):
+    return (a+b)
+def diff(a,b):
+    return (a-b)
+def mul(a,b):
+    return (a*b)
+def div(a,b):
+    if b == 0:
+        return "Error! Division by zero."
+    else:
+        return (a/b)
+def power(a,b):
+    return (a**b)
+def sqrt(a):
+    return math.sqrt(a)
+def log(a, b=math.e):
+    return math.log(a, b)
+op = input("""Enter the operator:
+           1. Addition
+           2. Subtraction
+           3. Multiplication
+           4. Division
+           5. Power
+           6. Square root
+           7. Logarithm
+           8. Trigonometric values""")
+if op == "1":
+    print("The sum of numbers is: ", add(a,b))
+elif op == "2":
+    print("The difference of numbers is: ", diff(a,b))
+elif op == "3":
+    print("The product of numbers is: ", mul(a,b))
+elif op == "4":
+    print("The division of numbers is: ", div(a,b))
+elif op == "5":
+    print("The power of numbers is: ", power(a,b))
+elif op == "6":
+    print("The square root of number is: ", sqrt(a))
+elif op == "7":
+    print("The logarithm of number is: ", log(a,b))
+elif op == "8":
+    import trigo
+    print("The trigonometric values are: ", trigo.trigo(a))
+else:
+    print("Invalid operator. Please try again.")
+# The above code is used to perform arithmetic operations on two numbers.    
